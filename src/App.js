@@ -17,6 +17,7 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './ionic-theme/variables.css';
 
+import 'materialize-css/dist/css/materialize.min.css';
 
 function App() {
   return (
