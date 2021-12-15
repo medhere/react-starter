@@ -17,6 +17,12 @@ export function useGetState([state]){return store.useState(s=>s[state])}
     //     var {id, value} = e.target;
     //     store.update(s => {s.key1 = {...s.key1,[id]:value}});
     // }
+    // var unsubscribe=myStore.subscribe((s) => s.state, (newValue, allState, prevValue) => { });
+    // unsubscribe()  
+	// var stopReaction=StoreName.createReaction((s) => s.state, (newValue, draftStore, originalStore, prevValue) => { });
+	// stopReaction();
+
+
 
 
 export const store2=createContext({
