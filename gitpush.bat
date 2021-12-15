@@ -8,7 +8,7 @@ git commit -m "New Commit - %comment%"
 set /P url="Enter git:  "
 git branch -M master
 git remote rm origin
-git remote add origin https://github.com/medhere/%url%.git
+git remote add origin https://github.com/medhere/%url%-starter.git
 git push -u origin master
 git remote rm origin
 PAUSE
