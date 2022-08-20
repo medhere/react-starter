@@ -1,9 +1,7 @@
 import { Store } from "pullstate";
-import { createContext } from "react";
 
 export var store = new Store({
-    key1:'value',
-    key2:'value'
+    key:'value'
 });
 
 export function useGetState([state]){return store.useState(s=>s[state])}
@@ -22,15 +20,5 @@ export function useGetState([state]){return store.useState(s=>s[state])}
 	// var stopReaction=StoreName.createReaction((s) => s.state, (newValue, draftStore, originalStore, prevValue) => { });
 	// stopReaction();
 
-
-
-
-export const store2=createContext({
-    key: 'value'
-});
-
-    // import {store2}
-    // var data = useContext(store2) 
-    // {data.key} 
 
 
