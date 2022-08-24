@@ -1,9 +1,10 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
-import { store } from './app/store';
+import { store } from './data/reduxStore';
 import { Provider } from 'react-redux';
 import { ConfirmProvider } from 'material-ui-confirm';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import './index.css';
 
 /* Core CSS required for Ionic components to work properly */
@@ -34,4 +35,10 @@ createRoot(document.getElementById('root'))
           </ConfirmProvider>
       </Provider>
   )
+
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://cra.link/PWA
+serviceWorkerRegistration.unregister();
 

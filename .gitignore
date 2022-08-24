@@ -18,8 +18,11 @@
 
 	# ignore ALL .log files
 	*.log
-
+	
 	# ignore ALL files in ANY directory named temp
-	temp/
+	/temp/
 
 	gitpush.bat
+	.env
+	/node_modules
+node_modules

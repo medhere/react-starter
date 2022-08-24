@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { AppShell, Navbar, Header, Footer, Text, MediaQuery, Burger, useMantineTheme, ScrollArea, UnstyledButton, Group, ThemeIcon, Image } from '@mantine/core';
 import { Link, Outlet } from 'react-router-dom';
 import logo from '../assets/images/logo.png'
 
 
 export const Nav = () => {
+  const theme = useMantineTheme();
   const [opened, setOpened] = useState(false);
 
   const links = [
@@ -21,7 +23,7 @@ export const Nav = () => {
             <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
               <Burger opened={opened} onClick={() => setOpened((o) => !o)} size="sm" color={theme.colors.gray[6]} mr="xl" />
             </MediaQuery>
-            <Image width={200} height={75} fit="contain" src={logo} alt='' />
+            <Image width={200} height={50} fit="contain" src={logo} alt='' />
             {/* <Text></Text> */}
           </i>
           
@@ -33,7 +35,7 @@ export const Nav = () => {
           <Navbar.Section mt="xs">
             <div className="bg-white rounded overflow-hidden shadow">
                 <div className="text-center p-6 border-b"> 
-                <img className="h-24 w-24 rounded-full mx-auto" src={myavatar} alt=""/>
+                <img className="h-24 w-24 rounded-full mx-auto" src="https://i.pravatar.cc/300" alt=""/>
                   <p className="pt-2 text-lg font-semibold"> FullName </p>
                 </div>
             </div>
@@ -43,7 +45,7 @@ export const Nav = () => {
               {links.map((link,index) => { return  <MainLink {...link} key={index} /> })}     
           </Navbar.Section>
 
-          <Navbar.Section>{/* Footer with user */}<i>{hours}:{minutes}:{seconds} {ampm}</i></Navbar.Section>        
+          <Navbar.Section>{/* Footer with user */}</Navbar.Section>        
         </Navbar> 
       }
 
