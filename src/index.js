@@ -1,6 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
+import { defineCustomElements } from '@ionic/pwa-elements/loader';
 import { store } from './data/reduxStore';
 import { Provider } from 'react-redux';
 import { ConfirmProvider } from 'material-ui-confirm';
@@ -40,5 +41,5 @@ createRoot(document.getElementById('root'))
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://cra.link/PWA
-serviceWorkerRegistration.unregister();
-
+serviceWorkerRegistration.uegister();
+defineCustomElements(window);
