@@ -27,6 +27,9 @@ import '@ionic/react/css/core.css';
 /* Theme variables */
 // import './ionic.css';
 
+// Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 createRoot(document.getElementById('root'))
   .render(
